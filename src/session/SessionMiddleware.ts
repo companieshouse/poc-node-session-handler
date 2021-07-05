@@ -98,7 +98,7 @@ const sessionRequestHandler = (config: CookieConfig, sessionStore: SessionStore,
                 originalSessionHash = hash(request.session)
             }
         } else {
-            loggerInstance().infoRequest(request, `Session cookie not found in request ${request.url}`);
+            loggerInstance().debugRequest(request, `Session cookie not found in request ${request.url}`);
             delete request.session;
         }
 
